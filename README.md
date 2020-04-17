@@ -97,14 +97,14 @@ $ npm sequelize db:seed:all
 Finally, to start the server, run the command bellow:
 
 ```
-$ yarn dev
+$ yarn start
 
 ```
 
 Or this command if you're using  _**npm**_:
 
 ```
-$ npm dev
+$ npm start
 
 ```
 
