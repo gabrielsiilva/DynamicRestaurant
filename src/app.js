@@ -23,7 +23,7 @@ class App {
 
     this.middlewares();
     this.routes();
-    // this.exceptionHandler();
+    this.exceptionHandler();
   }
 
   socket() {
