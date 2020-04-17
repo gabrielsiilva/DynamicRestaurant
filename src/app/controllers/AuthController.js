@@ -5,8 +5,8 @@ import User from '../models/User';
 
 class AuthController {
   async store(req, res) {
-    const schema = Yup.object().schema({
-      email: Yup.email().required(),
+    const schema = Yup.object().shape({
+      email: Yup.string().email().required(),
       password: Yup.string().required(),
     });
 

@@ -5,7 +5,10 @@ export default class Table extends Model {
     super.init(
       {
         status: Sequelize.ENUM(['available', 'unavailable']),
-        table_number: Sequelize.INTEGER,
+        table_number: {
+          type: Sequelize.INTEGER,
+          unique: true,
+        },
         total: Sequelize.VIRTUAL,
       },
       {

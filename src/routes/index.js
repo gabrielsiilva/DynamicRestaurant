@@ -1,28 +1,22 @@
 import { Router } from 'express';
 
-import TableController from '../app/controllers/TableController';
-import ItemController from '../app/controllers/ItemController';
-import AuthController from '../app/controllers/AuthController';
-import OrderController from '../app/controllers/OrderController';
+import authRouter from './auth.routes';
+import tableRouter from './tables.routes';
+import itemRouter from './items.routes';
+import orderRoutes from './orders.routes';
 
 const routes = new Router();
 
 // AUTH ROUTE
-routes.post('/auth', AuthController.store);
+routes.use('/auth', authRouter);
 
 // TABLES ROUTES
-routes.get('/tables', TableController.index);
-routes.post('/tables', TableController.store);
-routes.get('/tables/:id', TableController.show);
+routes.use('/tables', tableRouter);
 
-// items ROUTES
-routes.post('/items', ItemController.store);
-routes.get('/items', ItemController.index);
-// routes.get('/items/:id', ItemController.show);
-routes.get('/items/search', ItemController.search);
+// ITEMS ROUTES
+routes.use('/items', itemRouter);
 
 // ORDERS ROUTES
-routes.get('/orders/:tableNumber', OrderController.index);
-routes.post('/orders', OrderController.store);
+routes.use('/orders', orderRoutes);
 
 export default routes;

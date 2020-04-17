@@ -4,7 +4,7 @@ import Order from '../models/Order';
 
 class OrderController {
   async index(req, res) {
-    const { tableNumber } = req.params;
+    const { tableNumber } = req.query;
 
     const orders = Order.findAll({
       where: { table_number: tableNumber },
@@ -32,6 +32,8 @@ class OrderController {
       item_id: 1,
       amount,
     });
+
+    req.io.emit('order received', order);
 
     return res.json(order);
   }

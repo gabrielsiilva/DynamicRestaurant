@@ -2,9 +2,19 @@ import * as Yup from 'yup';
 import Item from '../models/Item';
 import PhoneticKey from '../models/PhoneticKey';
 
+import Cache from '../../lib/Cache';
+
 class ItemController {
   async index(req, res) {
+    const cached = await Cache.get('items');
+
+    if (cached) {
+      return res.json(cached);
+    }
     const items = await Item.findAll();
+
+    await Cache.set('items', items);
+
     return res.json(items);
   }
 
@@ -12,26 +22,6 @@ class ItemController {
     const { id } = req.params;
 
     const item = await Item.findOne({ where: { id } });
-
-    if (!item) return res.status(400).json({ error: 'Item not found' });
-
-    return res.json(item);
-  }
-
-  async search(req, res) {
-    let { search } = req.query;
-    search = PhoneticKey.encode(search.toUpperCase());
-
-    const item = await Item.findAll({
-      attributes: ['id', 'name', 'status', 'price'],
-      include: [
-        {
-          model: PhoneticKey,
-          as: 'phonetic_key',
-          where: { key: search },
-        },
-      ],
-    });
 
     if (!item) return res.status(400).json({ error: 'Item not found' });
 
@@ -50,6 +40,8 @@ class ItemController {
     }
 
     const item = await Item.create(req.body);
+
+    await Cache.invalidate('items');
 
     const array = item.name
       .toUpperCase()
