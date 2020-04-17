@@ -112,15 +112,19 @@ This will start the server for you.
 
 
 ## Build with
-- [OpenWeatherMap]([https://openweathermap.org/forecast5](https://openweathermap.org/forecast5)) - API for search weather informations
--   [React-Native](https://facebook.github.io/react-native/)  - Build the native app using JavaScript and React
--   [React-Navigation](https://reactnavigation.org/docs/en/getting-started.html)  - Router
-- [Axios](https://github.com/axios/axios) - HTTP Client
-- [Styled-Components](https://www.styled-components.com/) - Styles
-- [Expo-CLI]([https://docs.expo.io/versions/latest/workflow/expo-cli/](https://docs.expo.io/versions/latest/workflow/expo-cli/)) - Command line app
-- [Moment.js]([https://momentjs.com/](https://momentjs.com/)) - Manipulate dates
-- [React Native Elements]([https://react-native-elements.github.io/react-native-elements/](https://react-native-elements.github.io/react-native-elements/)) - Cross Platform React Native UI Toolkit
-- [React Native SVG]([https://github.com/react-native-community/react-native-svg](https://github.com/react-native-community/react-native-svg)) - SVG images in React Native
+- express
+- ioredis
+- socket.io
+- jsonwebtoken
+- pg
+- sequelize
+- youch
+- yup
+- bcryptjs
+- @sentry/node
+- cors
+- express-async-errors
+- express-handlebars
 
 
 ## Contributing
