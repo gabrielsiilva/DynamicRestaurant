@@ -64,11 +64,13 @@ You can check if you have the NodeJS just running this command below in your ter
 
 ```
 
-If everything's okay, check if you have postgres and redis server running in your machine.
+## Important!! ⚠
+
+Check if you have postgres and redis server running in your machine.
 I used the docker to create the images of the containers and run these services,
 and the ports used were the standards, (POSTGRES: 5432, REDIS: 6379)
 
-The database settings are contained in the /config/database.js file.
+All settings and variables to run the server are contained in the .env file.
 
 After doing this, run the commands below to create the database, create the tables and populate the user table as a standard user administrator.
 
@@ -114,6 +116,7 @@ This will start the server for you.
 ## Build with
 - express
 - ioredis
+- dotenv
 - socket.io
 - jsonwebtoken
 - pg
