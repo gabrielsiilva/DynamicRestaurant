@@ -1,7 +1,7 @@
 # DynamicRestaurant 🍽
 
 
-## About this Project
+## About this Project ℹ
 
 ![WithoutCache](/assets/WithoutCache.jpeg)
 ![WithCache](/assets/WithCache.jpeg)
@@ -11,20 +11,20 @@ This project is only the server side of the application, using websockets, cache
 
 The Insomnia Collection is in /insomnia-collection folder inside project, used to test the requests;
 
-## Why ?
+## Why ? 🤔
 
 This project is part of my personal portfolio, and part of excercises to TAP classes.
 
-## Some Observations about this App
+## Some Observations about this App 🧐
 
 I took too much time to learn about NodeJS and maybe some features need to be fixed, but I'm very happy with my progress :D
 
-## Prerequisites
+## Prerequisites ⚙
 
 #### Install Node
 Click in this link and install Node in LTS version: [https://nodejs.org/en/download/](https://nodejs.org/en/download/);
 
-## Getting Started
+## Getting Started 📖
 
 **Cloning the Repository**
 
@@ -113,7 +113,7 @@ $ npm start
 This will start the server for you.
 
 
-## Build with
+## Build with 🛠
 - express
 - ioredis
 - dotenv
