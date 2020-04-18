@@ -6,6 +6,7 @@
 ![WithoutCache](/assets/WithoutCache.jpeg)
 ![WithCache](/assets/WithCache.jpeg)
 ![CreateNewItem](/assets/CreateItem.jpeg)
+![PhoneticSearch](/assets/PhoneticSearch.jpeg)
 
 This project is only the server side of the application, using websockets, cached responses, persistence in postgresDB, and RegEx. :D
 
