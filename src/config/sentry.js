@@ -1,3 +1,5 @@
+require('dotenv/config');
+
 export default {
-  dsn: '',
+  dsn: process.env.SENTRY_DSN,
 };

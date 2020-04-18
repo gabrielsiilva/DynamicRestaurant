@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import * as Yup from 'yup';
 import jwt from 'jsonwebtoken';
 
@@ -26,9 +27,7 @@ class AuthController {
 
     return res.json({
       user,
-      token: jwt.sign({}, 'mysecretsecret', {
-        expiresIn: '7d',
-      }),
+      token: jwt.sign({}, process.env.APP_SECRET, { expiresIn: '7d' }),
     });
   }
 }
