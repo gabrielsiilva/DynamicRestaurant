@@ -19,6 +19,9 @@ This project is part of my personal portfolio, and part of excercises to TAP cla
 ### Search all items with cache (0ms)
 ![WithCache](/assets/WithCache.jpeg)
 
+### Create a new Item feature it's only for admin users (JWT)
+![CreateNewItemInvalidToken](/assets/CreateNewItemInvalidToken.jpeg)
+
 ### Create a new Item will invalidate the cache
 ![CreateNewItem](/assets/CreateItem.jpeg)
 
