@@ -27,28 +27,21 @@ Click in this link and install Node in LTS version: [https://nodejs.org/en/downl
 ## Getting Started 📖
 
 **Cloning the Repository**
-
 ```
  $ git clone https://github.com/gabrielsiilva/DynamicRestaurant.git
-
 ```
 
 After cloning the repository you have to do the commands below:
-
 ```
  $ cd DynamicRestaurant
-
 ```
 
 And if you're using  _**yarn**_:
-
 ```
 $ yarn
-
 ```
 
 Or if you're using  _**npm**_:
-
 ```
 $ npm install
 ```
@@ -58,10 +51,8 @@ $ npm install
 To run the project make sure that you have the NodeJS in your computer, if you haven't, please read the section  [Prerequisites](https://github.com/gabrielsiilva/DynamicRestaurant/tree/master#prerequisites)
 
 You can check if you have the NodeJS just running this command below in your terminal:
-
 ```
  $ node --version
-
 ```
 
 ## Important!! ⚠
@@ -73,47 +64,35 @@ and the ports used were the standards, (POSTGRES: 5432, REDIS: 6379)
 All settings and variables to run the server are contained in the .env file.
 
 After doing this, run the commands below to create the database, create the tables and populate the user table as a standard user administrator.
-
 ```
 $ yarn sequelize db:migrate
-
 ```
-
 ```
 $ yarn sequelize db:seed:all
-
 ```
 
 Or if you're using npm:
-
 ```
 $ npm sequelize db:migrate
-
 ```
-
 ```
 $ npm sequelize db:seed:all
-
 ```
 
 Finally, to start the server, run the command bellow:
-
 ```
 $ yarn start
-
 ```
 
 Or this command if you're using  _**npm**_:
-
 ```
 $ npm start
-
 ```
 
 This will start the server for you.
 
 
-## Build with 🛠
+## Build with
 - express
 - ioredis
 - dotenv
