@@ -3,11 +3,6 @@
 
 ## About this Project ℹ
 
-![WithoutCache](/assets/WithoutCache.jpeg)
-![WithCache](/assets/WithCache.jpeg)
-![CreateNewItem](/assets/CreateItem.jpeg)
-![PhoneticSearch](/assets/PhoneticSearch.jpeg)
-
 This project is only the server side of the application, using websockets, cached responses, persistence in postgresDB, and RegEx. :D
 
 The Insomnia Collection is in /insomnia-collection folder inside project, used to test the requests;
@@ -15,6 +10,20 @@ The Insomnia Collection is in /insomnia-collection folder inside project, used t
 ## Why ? 🤔
 
 This project is part of my personal portfolio, and part of excercises to TAP classes.
+
+## Screenshots 📸
+
+### Search all items without cache (391ms)
+![WithoutCache](/assets/WithoutCache.jpeg)
+
+### Search all items with cache (0ms)
+![WithCache](/assets/WithCache.jpeg)
+
+### Create a new Item will invalidate the cache
+![CreateNewItem](/assets/CreateItem.jpeg)
+
+### Phonetic search
+![PhoneticSearch](/assets/PhoneticSearch.jpeg)
 
 ## Some Observations about this App 🧐
 
